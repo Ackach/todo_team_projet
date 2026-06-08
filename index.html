@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Super To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="todo-card">
+        <header class="todo-header">
+            <h1>Ma To-Do List</h1>
+            <p class="subtitle">Organisez votre journée en toute simplicité</p>
+        </header>
+
+        <form id="todo-form" onsubmit="event.preventDefault();">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Qu'avez-vous à faire aujourd'hui ?" required
+                    autocomplete="off">
+                <button type="submit" id="add-btn">Ajouter</button>
+            </div>
+        </form>
+
+        <div class="filter-group">
+            <label class="radio-label">
+                <input type="radio" name="todo-filter" value="all" checked>
+                <span class="custom-radio">Toutes</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="todo-filter" value="active">
+                <span class="custom-radio">En cours</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="todo-filter" value="completed">
+                <span class="custom-radio">Terminées</span>
+            </label>
+        </div>
+
+        <ul id="todo-list">
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
