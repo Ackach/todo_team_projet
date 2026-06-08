@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Super To-Do List</title>
+    <!-- Liaison avec la feuille de style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importation d'une police moderne (Inter) -->
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+</head>
+<body>
+
+    <div class="todo-card">
+        <header class="todo-header">
+            <h1>Ma To-Do List</h1>
+            <p class="subtitle">Organisez votre journée en toute simplicité</p>
+        </header>
+
+        <!-- Formulaire d'ajout pour pouvoir aussi valider avec la touche "Entrée" -->
+        <form id="todo-form" onsubmit="event.preventDefault();">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    placeholder="Qu'avez-vous à faire aujourd'hui ?" 
+                    required 
+                    autocomplete="off"
+                >
+                <button type="submit" id="add-btn">Ajouter</button>
+            </div>
+        </form>
+
+        <!-- Liste où les tâches seront ajoutées dynamiquement -->
+        <ul id="task-list">
+            <!-- Exemple de tâche statique pour le test initial (à supprimer ensuite en JS) -->
+            <li class="task-item">
+                <span class="task-text">Exemple de tâche active</span>
+                <button class="delete-btn">Supprimer</button>
+            </li>
+            <li class="task-item completed">
+                <span class="task-text">Exemple de tâche terminée</span>
+                <button class="delete-btn">Supprimer</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Liaison avec le script JavaScript à la fin du body -->
+    <script src="script.js"></script>
+</body>
+</html>
